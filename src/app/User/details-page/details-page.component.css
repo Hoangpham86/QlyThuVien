@@ -1,0 +1,556 @@
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+}
+
+html {
+  background-color: #e8e4e4ad;
+  width: 100%;
+  margin-top: 64px;
+  margin-left: -1px;
+  padding-right: 24px;
+}
+
+.mdl-js {
+  background-color: #e8e4e4ad;
+
+}
+
+body {
+  margin: 57px;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "main extra";
+  margin-bottom: 27px;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 39px 10px 0 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px #ddd;
+  flex-grow: 1;
+  grid-area: main;
+  background-color: white;
+  color: #a29d9d;
+}
+
+.extra {
+  max-width: 800px;
+  height: auto;
+  margin: 20px 0 20px -18px;
+  padding: 20px;
+  flex-grow: 2;
+  grid-area: extra;
+}
+
+.btn-darkmode{
+  background-color: #37a6d677;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+    bottom: 230px;
+    right: 9px;
+}
+
+
+.fa-moon{
+  color: #0303038f; 
+  font-size: 25px;
+}
+
+.btn-darkmode:hover{
+  background-color: #7ec3e4d8;
+}
+
+img {
+  max-width: 250px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.rent {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+
+h3 {
+  color: #2980b9
+}
+
+.list p {
+  color: #2980b9;
+}
+
+.list li a {
+  color: black;
+}
+
+.TimeUpdate p {
+  color: #ddd;
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.book-rental {
+  display: flex;
+  margin-top: 5px;
+}
+
+.book-rental p {
+  margin-right: 5px;
+}
+
+.btn-rental {
+  font-size: 17px;
+  padding: 0.5em 1em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #6be6d7;
+  color: black;
+  border-radius: 4px;
+}
+
+.btn-rental:hover {
+  background-image: linear-gradient(45deg, #09bc83 0%, #6be6d7 51%, #09bc83 100%);
+  color: black;
+  cursor: pointer;
+}
+
+.btn-rental:active {
+  transform: translate(0em, 0.2em);
+}
+
+.btn-addcart {
+  font-size: 17px;
+  padding: 0.5em 1em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: #77da3a;
+  color: black;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.btn-addcart:hover {
+  background-image: linear-gradient(45deg, #5fcd68 0%, #0dc128 51%, #5fcd68 100%);
+  color: black;
+  cursor: pointer;
+}
+
+.btn-addcart:active {
+  transform: translate(0em, 0.2em);
+}
+
+.list {
+  border-bottom: solid 1px #ddd;
+  list-style-type: decimal;
+  margin-top: 10px;
+}
+
+.list p {
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.list li a {
+  text-transform: uppercase;
+}
+
+.list li a:hover {
+  color: #2980b9;
+}
+
+.main-content {
+  display: block;
+  height: 400px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ddd;
+}
+
+.width {
+  height: 25px;
+  padding-right: 20px;
+  width: 142px;
+}
+
+td {
+  font-size: 15px;
+}
+
+td a {
+  margin-right: 10px;
+}
+
+td a:hover {
+  color: #2980b9;
+}
+
+.all {
+  margin-top: 15px;
+}
+
+.quantity {
+  display: flex;
+  width: auto;
+  height: 21px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity h4 {
+  margin-right: 10px;
+}
+
+.quantity input {
+  width: 25px;
+  text-align: center;
+}
+
+.main-content div a:hover {
+  color: #2980b9;
+}
+
+.main-content div p:first-child {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.stars i {
+  color: gold;
+}
+
+.num-ratings {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.comment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment p {
+  margin-bottom: 5px;
+}
+
+.comment-info {
+  font-size: 14px;
+  color: #888;
+}
+
+.comment-info .user {
+  font-weight: bold;
+  color: #444;
+}
+
+.btnSubmit:hover {
+  box-shadow: 5px 5px 10px #971919;
+  /* box-shadow: -5px -5px 10px #c99a18; */
+}
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #e678b4 0, #cf12b6 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.button-29:focus {
+  box-shadow: #e678b4 0 0 0 1.5px inset, #cf12b6 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e678b4 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: #cf12b6 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e678b4 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #e678b4 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.menu {
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0px 0px 10px #ddd;
+  z-index: 2;
+}
+
+.sub-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 23 px;
+  margin-bottom: 25px;
+}
+
+
+.sub-menu a img {
+  width: 100px;
+  margin: 0 10px 0 0;
+  background-size: cover;
+}
+
+.sub-menu a img:hover{
+  opacity: 0.5;
+    transition: opacity .5s ease;
+  z-index: 1;
+
+}
+
+.name-book {
+  font-size: 15px;
+  height: 100%;
+}
+
+.name-book div {
+  float: left;
+  display: flex;
+  margin-bottom: 5px;
+  color: #a79f9f;
+}
+
+.name-book div p {
+  margin-right: 5px;
+}
+
+.name-book a {
+  color: #1e1116d4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name-book a:hover {
+  color: red;
+}
+
+.top {
+  font-size: 18px;
+  margin: 0;
+  background-image: radial-gradient(100% 100% at 100% 0, #e678b4 0, #cf12b6 100%);
+  color: white;
+  max-width: 125px;
+  text-align: center;
+}
+
+.number {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 0 15px 0 5px;
+  background-color: hsl(204, 64%, 44%);
+  border-radius: 50%;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(#e5a6ea, #c12cd1, #895e85);
+}
+
+.sub-menu a {
+  font-size: 18 px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* điều kiện cho màn hình nhỏ hơn 768px */
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content div {
+    margin-top: 20px;
+  }
+
+  .list {
+    margin-top: 20px;
+  }
+
+  .rating {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .list li {
+    margin-left: 20px;
+  }
+}
+
+/* Quy tắc CSS cho kích thước màn hình nhỏ hơn hoặc bằng 768px */
+@media (max-width: 1000px) {
+  .main-content {
+    height: 730px;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-rental {
+    width: 100px;
+  }
+}
+
+@media (max-width: 770px) {
+  * {
+    font-size: 15px;
+  }
+
+  .main-content {
+    height: 420px;
+  }
+
+  img {
+    max-width: 150px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .TimeUpdate p {
+    font-size: 2px;
+    margin: 0;
+  }
+
+  .main-content div {
+    margin: 0;
+  }
+
+  .main-content div p {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+
+/* chế độ sáng */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Chế độ tối */
+.dark-mode {
+  background-color: #201e1e;
+  color: #ffffff !important;
+}

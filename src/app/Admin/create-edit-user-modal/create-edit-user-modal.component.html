@@ -1,0 +1,121 @@
+<!-- SIDEBAR -->
+<section id="sidebar" [ngClass] ="status ? 'hide' : ''">
+  <a href="#" class="brand">
+    <i class='bx bx-book'></i>
+    <span class="text">Library</span>
+  </a>
+  <ul class="side-menu top">
+    <li >
+      <a routerLink="/admin">
+        <i class='bx bxs-dashboard'></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/books">
+        <i class='bx bx-book'></i>
+        <span class="text">Sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bxs-doughnut-chart'></i>
+        <span class="text">Thể loại sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/borrow">
+        <i class='bx bx-list-ul'></i>
+        <span class="text">Mượn sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bx-book-content'></i>
+        <span class="text">Trả sách</span>
+      </a>
+    </li>
+    <li  class="active">
+      <a routerLink="/admin/users">
+        <i class='bx bxs-user'></i>
+        <span class="text">Người dùng</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<!-- SIDEBAR -->
+<section id="content">
+  <nav>
+    <i (click)="addToggle()" class='bx bx-menu'></i>
+    <a href="#" class="nav-link">Categories</a>
+    <form action="#">
+    </form>
+
+    <a href="#" class="profile">
+      <img src="./assets/user-profile-default.png">
+    </a>
+  </nav>
+<div class="container shadow mt-4  p-3 mb-5 bg-body-tertiary rounded">
+  <div class="registartion-form m-3 p-4">
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Họ và tên </mat-label>
+            <input matInput />
+            <mat-icon matSuffix>account_circle</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Số CMND </mat-label>
+            <input matInput />
+            <mat-icon matSuffix>code</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Ngày sinh </mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Email </mat-label>
+            <input matInput />
+            <mat-icon matSuffix> email</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>SDT</mat-label>
+            <input matInput placeholder="SDT" />
+            <mat-icon matSuffix>perm_phone_msg</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+      <button
+        *ngIf="!isUpdateActive"
+        (click)="submit()"
+        class="mt-4"
+        mat-raised-button
+        color="accent"
+      >
+        Create
+      </button>
+      <button
+        *ngIf="isUpdateActive"
+        (click)="update()"
+        class="mt-4 ml-4"
+        mat-raised-button
+        color="accent"
+      >
+        Update
+      </button>
+    </form>
+  </div>
+</div>
+</section>

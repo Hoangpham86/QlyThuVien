@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Quản lý thư viện</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> 
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <a class="logo" href="#">
+            <img width="50px" height="auto"
+                src="https://png.pngtree.com/png-clipart/20220824/original/pngtree-people-read-books-in-digital-libraries-on-a-giant-smartphone-screens-png-image_8488006.png"
+                alt="Phần mềm 1Office – Nền tảng quản lý tổng thể doanh nghiệp">
+            <div class="title">Library</div>
+        </a>
+
+        <div class="container-input">
+            <input type="text" placeholder="Tìm kiếm" name="text" class="input">
+            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                    fill-rule="evenodd"></path>
+            </svg>
+        </div>
+
+        <div class="icons">
+            <app-translate style="z-index: 1;"></app-translate>
+            <ul class="menu">
+                <div>
+                    <mat-icon>sort</mat-icon>
+                    <li>{{'Danh mục' | translate}}
+                        <ul class="sub-menu">
+                            <li><a href="#">{{'Danh mục 1' | translate}} </a></li>
+                            <li class="has-sub-menu">
+                                <a href="#">{{'Danh mục 2' | translate}} </a>
+                                <ul class="sub-menu-mini">
+                                    <li><a href="#">{{'Mục con 1' | translate}}</a></li>
+                                    <li><a href="#">{{'Mục con 2' | translate}}</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">{{'Danh mục 3' | translate}} </a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+
+
+            <a class="icon" href="#">
+                <mat-icon>shopping_cart</mat-icon>
+                <p href="#">{{'Giỏ sách' | translate}}</p>
+            </a>
+
+            <a class="icon" href="#">
+                <mat-icon>help_outline</mat-icon>
+                <p href="#">{{'Trợ giúp' | translate}}</p>
+            </a>
+
+            <button routerLink="/login" role="button">{{'Đăng nhập' | translate}}</button>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+  
+

@@ -1,0 +1,32 @@
+a {
+    display: grid;
+    position: fixed;
+    bottom: 195px;
+    right: 9px;
+    width: 30px;
+    height: 30px;
+    background: #37a6d677;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 999;
+}
+
+a:hover {
+    background: #1c9bca9d;
+}
+
+a i {
+    padding-top: 2px;
+} 
+
+.show {
+    display: block;
+}
+
+.fa {
+    font-size: 20px;
+    color: rgba(9, 7, 7, 0.479);
+}

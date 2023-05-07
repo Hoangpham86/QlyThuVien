@@ -1,0 +1,230 @@
+<html [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <div class="wrapper">
+    <div class="container">
+    <app-header style="z-index: 999; position: absolute;"></app-header>
+    <div class="container" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+      <main class="main" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+        <div class="main-content">
+          <img src="https://salt.tikicdn.com/cache/w1200/ts/product/9f/d0/90/bfe7bec5b6d9704078a80692874e3279.jpg"
+            alt="Book cover">
+          <h2 [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">Naruto Mashashi Kisimotio</h2>
+          <div class="TimeUpdate">
+            <p>[{{'Cập nhật lúc' | translate}}: 10:30  07/05/2023]</p>
+          </div>
+           <div class="rent">
+            <p>15</p>
+            <p>{{'Lượt thuê' | translate}}</p>
+          </div>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="num-ratings">(2 {{'Đánh giá' | translate}})</div>
+          </div>
+
+          <table>
+            <tr>
+              <td class="width"><i class="fa-solid fa-user" style="color: #a29d9d;"></i> {{'Tác giả' | translate}}:</td>
+              <td>Phạm Văn Hoàng </td>
+            </tr>
+            <tr>
+              <td class="width"><i class="fa-solid fa-house" style="color: #a29d9d;"></i> {{'Nhà xuất bản' |
+                translate}}:</td>
+              <td>Nhà xuất bản Kim Đồng</td>
+            </tr>
+            <tr>
+              <td class="width"><i class="fa-solid fa-calendar-days" style="color: #a29d9d;"></i> {{'Ngày xuất bản' |
+                translate}}:</td>
+              <td>20/03/2023</td>
+            </tr>
+            <tr>
+              <td class="width"><i class="fa-solid fa-pen-nib" style="color: #a29d9d;"></i> {{'Thể loại' | translate}}:
+              </td>
+              <td>
+                <a href="#">{{'Hành động' | translate}}</a>
+                <a href="#">{{'Tình cảm' | translate}}</a>
+                <a href="#">{{'Phiêu lưu' | translate}}</a>
+
+                <!-- darkmode -->
+                <button class="btn-darkmode" (click)="toggleDarkMode()"><i class="fa-regular fa-moon"></i></button>
+              </td>
+            </tr>
+          </table>
+
+          <div class="all">
+            <div class="quantity">
+              <h4>{{'Số lượng' | translate}}:</h4>
+              <button (click)="decreaseQuantity()">-</button>
+              <input type="text" [(ngModel)]="quantity">
+              <button (click)="increaseQuantity()">+</button>
+            </div>
+
+            <div class="book-rental">
+              <button class="btn-addcart"><i class="fa-solid fa-cart-shopping"></i> {{'Thêm vào giỏ sách' |
+                translate}}</button>
+              <button class="btn-rental">{{'Thuê sách' | translate}}</button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+          <p><i class="fa-solid fa-list" style="color: #2980b9;"></i> {{'Danh sách các chương' | translate}}:</p>
+          <li><a [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}" href="#">Chương 1: coment </a></li>
+          <li><a [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}" href="#">Chương 2: coment</a>
+          </li>
+          <li><a [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}" href="#">Chương 3: coment</a></li>
+        </ul>
+
+        <ul class="list">
+          <p><i class="fa-solid fa-circle-info" style="color: #2980b9;"></i> {{'Mô tả' | translate}}:</p>
+          <li>{{'Mười hai năm trước khi bộ truyện này bắt đầu, con Hồ Ly Chín Đuôi đã tấn công ngôi làng ninja làng Lá
+            (木ノ葉隠れ Konohagakure?). Đủ sức mạnh để khiến sóng thần nổi dậy và san bằng núi non chỉ với một trong số chín
+            cái đuôi của nó, nó đã gây nên sự hỗn loạn tột cùng và giết chóc nhiều người, cho tới khi người lãnh đạo của
+            làng Lá – ngài Hokage Đệ Tứ (Namikaze Minato)đã hi sinh để phong ấn con quái vật bằng thuật cấm: Kin Jutsu
+            Ogi! Shiki Fuin (Một thuật cấm phải đánh đổi bằng tính mạng) vào người Naruto khi cậu ta mới sinh. Hokage Đệ
+            Tứ, người được vinh danh vì đã phong ấn con yêu hồ li, mong muốn Naruto được người dân tôn trọng vì đã là
+            thân xác chứa đựng con quái vật.' | translate}}</li>
+        </ul>
+
+
+        <form>
+          <h3>{{'Đánh giá của bạn' | translate}}</h3>
+          <textarea placeholder="Nhập đánh giá của bạn"></textarea>
+          <button class="button-29" role="button">{{'Gửi đánh giá' | translate}}</button>
+        </form>
+
+        <h3>{{'Đánh giá của người dùng' | translate}}</h3>
+
+        <div class="comment">
+          <p>truyện khá là hay</p>
+          <div class="comment-info">{{'Bởi' | translate}} <span class="user">Người dùng 1</span> {{'vào ngày' |
+            translate}} 01/01/2023</div>
+        </div>
+
+        <div class="comment">
+          <p>Rất là hay luôn </p>
+          <div class="comment-info">{{'Bởi' | translate}} <span class="user">Người dùng 2</span> {{'vào ngày' |
+            translate}} 02/01/2023</div>
+        </div>
+
+      </main>
+      <div class="extra">
+
+        <p class="top">{{'Top tháng' | translate}}</p>
+        <li>
+          <ul class="menu" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">
+            <ul>
+              <li class="sub-menu">
+                <p class="number">01</p>
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e1/FairyTail-Volume_1_Cover.jpg/220px-FairyTail-Volume_1_Cover.jpg"
+                    alt="ảnh sách hot trong tháng"></a>
+                <div class="name-book">
+                  <a href="#" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">Chúa tể của loài khủng long
+                    bạo chúa</a>
+                  <div>
+                    <p>15</p>
+                    <p>{{'Lượt thuê'| translate}}</p>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul>
+              <li class="sub-menu">
+                <p class="number">02</p>
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e1/FairyTail-Volume_1_Cover.jpg/220px-FairyTail-Volume_1_Cover.jpg"
+                    alt="ảnh sách hot trong tháng"></a>
+                <div class="name-book">
+                  <a href="#" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">Chúa tể của loài khủng long
+                    bạo chúa</a>
+                  <div>
+                    <p>15</p>
+                    <p>{{'Lượt thuê'| translate}}</p>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul>
+              <li class="sub-menu">
+                <p class="number">03</p>
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/vi/thumb/e/e1/FairyTail-Volume_1_Cover.jpg/220px-FairyTail-Volume_1_Cover.jpg"
+                    alt="ảnh sách hot trong tháng"></a>
+
+                <div class="name-book">
+                  <a href="#" [ngClass]="{'light-mode': !darkMode, 'dark-mode': darkMode}">Chúa tể của loài khủng long
+                    bạo chúa</a>
+                  <div>
+                    <p>15</p>
+                    <p>{{'Lượt thuê'| translate}}</p>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </li>
+
+        <!-- <li>Top tuần
+            <ul class="sub-menu">
+              <li><a href="#">danh mục 1 </a></li>
+              <li><a href="#">danh mục 2</a></li>
+              <li><a href="#">danh mục 3</a></li>
+            </ul>
+          </li>
+
+          <li>Top ngày
+            <ul class="sub-menu">
+              <li><a href="#">danh mục 1 </a></li>
+              <li><a href="#">danh mục 2</a></li>
+              <li><a href="#">danh mục 3</a></li>
+            </ul>
+          </li> -->
+
+
+      </div>
+    </div>
+
+  </div>
+<app-back-to-top></app-back-to-top>
+<app-footer></app-footer>

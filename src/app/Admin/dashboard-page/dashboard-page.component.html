@@ -1,0 +1,188 @@
+<!-- SIDEBAR -->
+<section id="sidebar" [ngClass]="status ? 'hide' : ''">
+  <a href="#" class="brand">
+    <i class='bx bx-book'></i>
+    <span class="text">Library</span>
+  </a>
+  <ul class="side-menu top">
+    <li class="active">
+      <a routerLink="/admin">
+        <i class='bx bxs-dashboard'></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/books">
+        <i class='bx bx-book'></i>
+        <span class="text">Sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bxs-doughnut-chart'></i>
+        <span class="text">Thể loại sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/borrow">
+        <i class='bx bx-list-ul'></i>
+        <span class="text">Mượn sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bx-book-content'></i>
+        <span class="text">Trả sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/users">
+        <i class='bx bxs-user'></i>
+        <span class="text">Người dùng</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<!-- SIDEBAR -->
+<!-- CONTENT -->
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i (click)="addToggle()" class='bx bx-menu'></i>
+    <a href="#" class="nav-link">Categories</a>
+    <form action="#">
+    </form>
+
+    <a href="#" class="profile">
+      <img src="./assets/user-profile-default.png">
+    </a>
+  </nav>
+  <!-- NAVBAR -->
+  <!-- MAIN -->
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">Dashboard</a>
+          </li>
+          <li><i class='bx bx-chevron-right'></i></li>
+          <li>
+            <a class="active" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <ul class="box-info">
+      <li>
+        <i class='bx bx-book'></i>
+        <span class="text">
+          <h3>600</h3>
+          <p>Total Books</p>
+        </span>
+      </li>
+      <li>
+        <i class='bx bxs-group'></i>
+        <span class="text">
+          <h3>200</h3>
+          <p>Total Users</p>
+        </span>
+      </li>
+      <li>
+        <i class='bx bxs-dollar-circle'></i>
+        <span class="text">
+          <h3>$2543</h3>
+          <p>Total Sales</p>
+        </span>
+      </li>
+    </ul>
+    <div class="table-data">
+      <div class="order">
+        <div class="head">
+          <h3>New Book</h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Updated at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./assets/profile.png">
+                <p>Cuốn Theo Chiều Gió</p>
+              </td>
+              <td>18/04/2023</td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/profile.png">
+                <p>Cuộc Đời Của Pi</p>
+              </td>
+              <td>18/04/2023</td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/profile.png">
+                <p>Bá Tước Monte Cristo</p>
+              </td>
+              <td>18/04/2023</td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/profile.png">
+                <p>Nhà Giả Kim</p>
+              </td>
+              <td>18/04/2023</td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/profile.png">
+                <p>Cuốn Theo Chiều Gió</p>
+              </td>
+              <td>18/04/2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="todo">
+        <div class="head">
+          <h3>New Series</h3>
+        </div>
+        <ul class="todo-list">
+          <li class="completed">
+            <p>Bố Già - Mario Puzo</p>
+            <i class='bx bx-dots-vertical-rounded'></i>
+          </li>
+          <li class="completed">
+            <p>Ông Già Và Biển Cả - Ernest Hemingway</p>
+            <i class='bx bx-dots-vertical-rounded'></i>
+          </li>
+          <li class="completed">
+            <p>Hoàng Tử Bé - Antoine de Saint-Exupéry</p>
+            <i class='bx bx-dots-vertical-rounded'></i>
+          </li>
+          <li class="completed">
+            <p>Chiến Tranh Và Hòa Bình – Leo Tolstoy</p>
+            <i class='bx bx-dots-vertical-rounded'></i>
+          </li>
+          <li class="completed">
+            <p>Không Gia Đình - Hector Malot</p>
+            <i class='bx bx-dots-vertical-rounded'></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- CONTENT -->

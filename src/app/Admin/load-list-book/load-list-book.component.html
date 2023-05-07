@@ -1,0 +1,183 @@
+<!-- SIDEBAR -->
+<section id="sidebar" [ngClass]="status ? 'hide' : ''">
+  <a href="#" class="brand">
+    <i class='bx bx-book'></i>
+    <span class="text">Library</span>
+  </a>
+  <ul class="side-menu top">
+    <li>
+      <a routerLink="/admin">
+        <i class='bx bxs-dashboard' ></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li class="active">
+      <a routerLink="/admin/books">
+        <i class='bx bx-book'></i>
+        <span class="text">Sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bxs-doughnut-chart' ></i>
+        <span class="text">Thể loại sách</span>
+      </a>
+    </li>
+    <li >
+      <a routerLink="/admin/borrow">
+        <i class='bx bx-list-ul'></i>
+        <span class="text">Mượn sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/">
+        <i class='bx bx-book-content'></i>
+        <span class="text">Trả sách</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/users">
+        <i class='bx bxs-user'></i>
+        <span class="text">Người dùng</span>
+      </a>
+    </li>
+  </ul>
+</section>
+<!-- SIDEBAR -->
+<!-- CONTENT -->
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i (click)="addToggle()" class='bx bx-menu' ></i>
+    <a href="#" class="nav-link">Categories</a>
+    <form action="#">
+    </form>
+
+    <a href="#" class="profile">
+      <img src="./assets/user-profile-default.png">
+    </a>
+  </nav>
+  <!-- NAVBAR -->
+  <!-- MAIN -->
+  <main>
+
+    <!-- main content -->
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <button routerLink="/bookadd" mat-raised-button class="accent"> <i class="	fa fa-plus " aria-hidden="true"></i>
+          Thêm book
+        </button>
+        <!-- filter -->
+        <mat-form-field class="filter" appearance="outline">
+          <mat-label>Filter</mat-label>
+          <input matInput placeholder="Ex. Mia" #input>
+        </mat-form-field>
+      </div>
+
+
+      <div class="mat-elevation-z8">
+        <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Hình ảnh</th>
+                  <th>Tên sách</th>
+                  <th>Tác giả</th>
+                  <th>Nhà xuất bản</th>
+                  <th>Thể loại</th>
+                  <th>Thời gian cập nhật</th>
+                  <th>Thao tác</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td class="img-td"><img src="https://via.placeholder.com/50x50.png?text=Book+Cover" alt="Book Cover">
+                  </td>
+                  <td>Đắc nhân tâm</td>
+                  <td>Dale Carnegie</td>
+                  <td>NXB Trẻ</td>
+                  <td>Tâm lý học</td>
+                  <td>2023-05-05</td>
+                  <td>
+                      <button class="add-btn"><i class="fa-solid fa-circle-plus" style="color: #0d4bb5;"></i></button>
+                      <button class="edit-btn"><i class="fa-solid fa-pen" style="color: #0bbe4a;"></i></button>
+                      <button class="delete-btn"><i class="fa-solid fa-trash-can" style="color: #f00c0c;"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td class="img-td"><img src="https://via.placeholder.com/50x50.png?text=Book+Cover" alt="Book Cover">
+                  </td>
+                  <td>Tiếng anh cho người mới bắt đầu</td>
+                  <td>David Văn Hoàng </td>
+                  <td>NXB tiên phong</td>
+                  <td>Ngoại ngữ</td>
+                  <td>2023-05-10</td>
+                  <td>
+                      <button class="add-btn"><i class="fa-solid fa-circle-plus" style="color: #2363d1;"></i></button>
+                      <button class="edit-btn"><i class="fa-solid fa-pen" style="color: #20d55f;"></i></button>
+                      <button class="delete-btn"><i class="fa-solid fa-trash-can" style="color: #e82121;"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td class="img-td"><img src="https://via.placeholder.com/50x50.png?text=Book+Cover" alt="Book Cover">
+                  </td>
+                  <td>Lập trình cơ bản cho người mới bắt đầu</td>
+                  <td>David Văn Hoàng  </td>
+                  <td>NXB tiên phong</td>
+                  <td>Ngoại ngữ</td>
+                  <td>2023-05-15</td>
+                  <td>
+                      <button class="add-btn"><i class="fa-solid fa-circle-plus" style="color: #2363d1;"></i></button>
+                      <button class="edit-btn"><i class="fa-solid fa-pen" style="color: #20d55f;"></i></button>
+                      <button class="delete-btn"><i class="fa-solid fa-trash-can" style="color: #e82121;"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td class="img-td"><img src="https://via.placeholder.com/50x50.png?text=Book+Cover" alt="Book Cover">
+                  </td>
+                  <td>Hoa cho người giàu lệ cho người nghèo</td>
+                  <td>David Văn Hoàng </td>
+                  <td>NXB tiên phong</td>
+                  <td>Ngoại ngữ</td>
+                  <td>2023-05-20</td>
+                  <td>
+                      <button class="add-btn"><i class="fa-solid fa-circle-plus" style="color: #2363d1;"></i></button>
+                      <button class="edit-btn"><i class="fa-solid fa-pen" style="color: #20d55f;"></i></button>
+                      <button class="delete-btn"><i class="fa-solid fa-trash-can" style="color: #e82121;"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td class="img-td"><img src="https://via.placeholder.com/50x50.png?text=Book+Cover" alt="Book Cover">
+                  </td>
+                  <td>Học làm giàu</td>
+                  <td>David Văn Hoàng </td>
+                  <td>NXB tiên phong</td>
+                  <td>Ngoại ngữ</td>
+                  <td>2023-04-15</td>
+                  <td>
+                      <button class="add-btn"><i class="fa-solid fa-circle-plus" style="color: #2363d1;"></i></button>
+                      <button class="edit-btn"><i class="fa-solid fa-pen" style="color: #20d55f;"></i></button>
+                      <button class="delete-btn"><i class="fa-solid fa-trash-can" style="color: #e82121;"></i></button>
+                  </td>
+              </tr>
+
+          </tbody>
+      </table>
+
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+
+
+    </div>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- CONTENT -->
+
+    <!-- <h1>Danh sách Sách</h1> -->
