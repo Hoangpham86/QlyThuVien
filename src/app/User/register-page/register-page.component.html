@@ -37,8 +37,9 @@
           <input type="password" [formControl]="password" name="password" placeholder="Nhập password" required>
           <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
             <span class="error-text" *ngIf="password.errors?.['required']">Password is required.</span>
-            <span class="error-text" *ngIf="password.errors?.['minlength']">Password must contain at least 6 characters.</span>
-            <!-- <div class="error-text" *ngIf="password.errors?.['pattern']">Password cannot contain whitespace</div> -->
+            <span class="error-text" *ngIf="password.errors?.['minlength']">Password must contain at least 6
+              characters.</span>
+            <div class="error-text" *ngIf="password.errors?.['pattern']">Password cannot contain whitespace</div>
           </div>
         </div>
         <div class="input-box">
@@ -46,9 +47,10 @@
           <input type="password" [formControl]="repassword" name="repassword" placeholder="Nhập lại password" required>
           <div *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)" class="alert">
             <span class="error-text" *ngIf="repassword.errors?.['required']">Password is required.</span>
-            <span class="error-text" *ngIf="repassword.errors?.['minlength']">Password must contain at least 6 characters.</span>
+            <span class="error-text" *ngIf="repassword.errors?.['minlength']">Password must contain at least 6
+              characters.</span>
             <span class="error-text" *ngIf="repassword.hasError('mismatch')">Password did not match</span>
-            <!-- <div class="error-text" *ngIf="password.errors?.['pattern']">Password cannot contain whitespace</div> -->
+            <div class="error-text" *ngIf="password.errors?.['pattern']">Password cannot contain whitespace</div>
           </div>
         </div>
       </div>

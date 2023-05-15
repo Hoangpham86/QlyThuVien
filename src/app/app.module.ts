@@ -22,6 +22,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 
+
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -58,11 +59,17 @@ import { ErrorPageComponent } from './User/error-page/error-page.component';
 import { TranslateComponent } from './layouts/translate/translate.component';
 import { LoadListBookComponent } from './Admin/load-list-book/load-list-book.component';
 import { BorrowPagesComponent } from './User/borrow-pages/borrow-pages.component';
+import { BookDialogComponent } from './book-dialog/book-dialog.component';
+
+
+
+
 
 @NgModule({
+
   imports: [
     BrowserModule,
-
+    FormsModule,
 
     MatFormFieldModule,
     MatInputModule,
@@ -127,7 +134,13 @@ import { BorrowPagesComponent } from './User/borrow-pages/borrow-pages.component
     CreateEditUserModalComponent,
     CreateEditBookModalComponent,
     BorrowPagesComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    BookDialogComponent,
+
+
+
+
+
   ],
 
   providers: [],

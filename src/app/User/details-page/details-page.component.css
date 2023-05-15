@@ -33,6 +33,12 @@ h2 {
   color: black;
 }
 
+h3 {
+  margin-top: 0;
+  letter-spacing: 2px;
+  color: black;
+}
+
 .container {
   max-width: 1500px;
   width: 100%;
@@ -63,22 +69,32 @@ h2 {
   grid-area: extra;
 }
 
-.btn-darkmode{
+.extra1 {
+  max-width: 800px;
+  width: 30%;
+  height: auto;
+  margin: 20px 0 20px -18px;
+  padding: 20px;
+  flex-grow: 2;
+  grid-area: extra1;
+}
+
+.btn-darkmode {
   background-color: #37a6d677;
   border-radius: 50%;
   border: none;
   position: fixed;
-    bottom: 230px;
-    right: 9px;
+  bottom: 230px;
+  right: 9px;
 }
 
 
-.fa-moon{
-  color: #0303038f; 
+.fa-moon {
+  color: #0303038f;
   font-size: 25px;
 }
 
-.btn-darkmode:hover{
+.btn-darkmode:hover {
   background-color: #7ec3e4d8;
 }
 
@@ -394,16 +410,22 @@ input[type="submit"] {
   background-size: cover;
 }
 
-.sub-menu a img:hover{
+.sub-menu a img:hover {
   opacity: 0.5;
-    transition: opacity .5s ease;
+  transition: opacity .5s ease;
   z-index: 1;
 
 }
 
 .name-book {
+  max-width: 100%;
   font-size: 15px;
   height: 100%;
+}
+
+.name-book__title {
+  display: flex;
+  flex-direction: column;
 }
 
 .name-book div {
@@ -493,6 +515,10 @@ input[type="submit"] {
   .list li {
     margin-left: 20px;
   }
+
+  .list li {
+    margin-left: 20px;
+  }
 }
 
 /* Quy tắc CSS cho kích thước màn hình nhỏ hơn hoặc bằng 768px */
@@ -547,10 +573,16 @@ input[type="submit"] {
 .light-mode {
   background-color: #ffffff;
   color: #000000;
+  padding-right: 0;
 }
 
 /* Chế độ tối */
 .dark-mode {
   background-color: #201e1e;
   color: #ffffff !important;
+}
+
+.container__wrab {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,11 +1,13 @@
 /* chế độ sáng */
 .light-mode {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  /* Chế độ tối */
-  .dark-mode {
-    background-color: #000000;
-    color: #ffffff !important;
-  }
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1rem;
+}
+
+/* Chế độ tối */
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff !important;
+  z-index: 1rem;
+}

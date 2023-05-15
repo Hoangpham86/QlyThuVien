@@ -53,7 +53,7 @@
     </form>
 
     <a href="#" class="profile">
-      <img src="data:image/png;base64,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">
+      <img src="data:image/png;">
     </a>
   </nav>
 <div class="container shadow mt-5 mt-4 mt-5  p-3 mb-5 bg-body-tertiary rounded">
@@ -121,7 +121,7 @@
                 (change)="uploadFileEvt($event)"
                 name="uploadFile"
                 multiple="multiple"
-                accept="image/*"
+                accept="image/"
               />
             </div>
           </mat-form-field>
@@ -137,7 +137,7 @@
       >
         Create
       </button>
-      <!-- <button
+       <button
         *ngIf="!isUpdateActive"
         (click)="update()"
         class="mt-4"
@@ -145,7 +145,7 @@
         color="accent"
       >
         Update
-      </button> -->
+      </button> 
     </form>
   </div>
 </div>
