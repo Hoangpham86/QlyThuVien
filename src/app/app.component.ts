@@ -20,6 +20,8 @@ export class AppComponent {
 
   }
   //edit
+  //edit ttt
+
   ngOnInit() {
     console.log('hello')
     this.api.getDataFromAPI().subscribe(data => console.log(data))
