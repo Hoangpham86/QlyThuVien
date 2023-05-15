@@ -19,7 +19,7 @@ export class AppComponent {
   constructor(private api: ApiService) {
 
   }
-
+  //edit
   ngOnInit() {
     console.log('hello')
     this.api.getDataFromAPI().subscribe(data => console.log(data))
